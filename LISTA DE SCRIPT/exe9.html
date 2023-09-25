@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    altura inicia:
+    <input type="text" id="input_inicial"><br>
+    altura final:
+    <input type="text" id="input_final"><br>
+    nome do candidato:
+    <input type="text" id="input_nome"><br>
+    altura do canditado:
+    <input type="text" id="input_altura">
+    <button onclick="minhafuncao()">Verificar candidato</button>
+    <div id="div_cand"></div>
+</body>
+</html>
+<script>
+    function minhafuncao(){
+        var inicial = Number(input_inicial.value);
+        var final = Number(input_final.value);
+        var nomecand = input_nome.value;
+        var alturacand = Number(input_altura.value);
+
+        if(inicial > 1 && final > inicial){
+            div_cand.innerHTML = `O candidato ${nomecand} com altura de ${alturacand} participará do processo de seleção de piloto`
+        }
+        else{
+            div_cand.innerHTML = `Infelizmente o candidato ${nomecand} com altura de ${alturacand} não atende os requisitos`
+        }
+    }
+</script>
